@@ -25,7 +25,12 @@ public class AdbShell extends BackgroundAdbCommand {
 	}
 	
 	public boolean isRootShell(){
-		return(prompt.equals(OterStatics.ADB_ROOT_SHELL));
+		for(String root: OterStatics.ADB_ROOT_SHELLS){
+			if(prompt.equals(root)){
+				return(true);
+			}
+		}
+		return(false);
 	}
 	
 	public int start() throws Exception{
