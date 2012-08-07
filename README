@@ -1,3 +1,16 @@
+IMPORTANT NOTE:
+
+This is only a fork of otertool which contain some bugfix for using it with REAL devices running Android 4.0.3 and above (include ICS and JB).
+
+If you wish to use otertool with emulator (which running any version of Android), you should always go to the origin site and download:
+
+https://github.com/wuntee/otertool/
+
+The code and binaries released here may incompatible with currently emulator in some specify situation.
+
+Claud Xiao
+
+
 Otertool
 
 If you are simply looking to download the tool, please view the releases directory, or follow one of the following links.
