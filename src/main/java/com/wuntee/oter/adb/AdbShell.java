@@ -113,7 +113,15 @@ public class AdbShell extends BackgroundAdbCommand {
 				line = line + c;
 			}
 		}
-		ret = ret.subList(1, ret.size());
+
+		// Fix a shell output problem in Android 4.0.3+ devices.
+                int cut = 1;
+                int len = (prompt+command).length();
+                if(len >= 78){
+                    	cut = len / 58 + 1;
+                }
+
+		ret = ret.subList(cut, ret.size());
 		logger.debug("Got prompt, returning: " + ret);
 		return(ret);
 	}
